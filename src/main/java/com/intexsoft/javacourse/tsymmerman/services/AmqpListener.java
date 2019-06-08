@@ -8,13 +8,12 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 /**
  * Created by kenasan on 08.06.2019.
  */
-@RabbitListener (queues = AmqpConstants.QUEUE_NAME)
+@RabbitListener(queues = AmqpConstants.QUEUE_NAME)
 @Log4j
 public class AmqpListener {
 
     @RabbitHandler
     public void listener(String messageQueue) {
-       log.info("get message: " + messageQueue);
-        System.out.println("a;sdlkfj" );
+        log.info("get message: " + messageQueue);
     }
 }
